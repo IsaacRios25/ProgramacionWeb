@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica2</title>
+</head>
+<!--Isaac Elihu Rios de la Tejera 184642-->
+<body style="background-color: black;">
+    <center><h1 style="color: white;">El sistema solar</h1></center>
+    <hr>
+    <table>
+        <th>
+            <img alt="Mercurio" src="imagenes/mercurio.jpg" width="75%" id="mercurio">
+        </th>
+        <th>
+            <img alt="Venus" src="imagenes/venus.jpg" width="75%" id="venus" >
+        </th>
+        <th>
+            <figure>
+            <img alt="Tierra" src="imagenes/tierra.jpg" width="75%" id="tierra">
+            </figure>
+        </th>
+        <th>
+            <figure>
+            <img alt="Marte" src="imagenes/marte.jpg" width="75%" id="marte">
+            </figure>
+        </th>
+    </table>
+    <center><iframe id="iframe1" width="75%" height="500px"></iframe></center>
+    <script>
+    document.getElementById('mercurio').addEventListener('click', function() {
+    document.getElementById('iframe1').src = this.src;
+    });
+
+    document.getElementById('venus').addEventListener('click', function() {
+    document.getElementById('iframe1').src = this.src;
+    });
+
+    document.getElementById('tierra').addEventListener('click', function() {
+    document.getElementById('iframe1').src = this.src;
+    });
+    document.getElementById('marte').addEventListener('click', function() {
+    document.getElementById('iframe1').src = this.src;
+    });
+  </script>
+    
+</html>
