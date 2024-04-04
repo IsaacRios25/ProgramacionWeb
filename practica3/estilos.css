@@ -1,0 +1,44 @@
+#t1{
+    margin: 15%;
+    background-color: orange;
+    width: 75%;
+    height: max-content;
+    border: 5px;
+    border-radius: 10%;
+    text-align: center;
+    -moz-border-radius:20px;
+    -webkit-border-radius:20px;
+}
+#t1 :hover{
+    text-decoration: none;
+    background-color: rgb(234, 234, 52);
+    color: blueviolet;
+    border-radius: 10%;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    -moz-border-radius:20px;
+    -webkit-border-radius:20px;
+}
+a{
+    text-decoration: none;
+}
+a:link{
+    color: purple;
+    
+}
+a:visited{
+    color: white;
+}
+a :hover{
+    text-decoration: none;
+    background-color: yellow;
+    color: blueviolet;
+}
+#t1:active, a:active{
+    background-color: green;
+    color: purple;
+    text-decoration: underline;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration-color: purple ;
+}
+

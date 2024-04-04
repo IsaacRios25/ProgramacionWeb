@@ -1,0 +1,29 @@
+h1{
+    text-align: center;
+}
+#contenedor{
+    background-color: gray;
+    width: 80%;
+    margin: 10%;
+}
+#cont{
+    margin: 10%;
+}
+form{
+    align-items: center;
+    
+}
+#boton{
+    background-color: rgb(20, 97, 240);
+    border: none;
+    border-radius: 5%;
+    -moz-border-radius: 5%;
+    -webkit-border-radius: 5%;
+}
+input{
+    border: solid rgb(63, 60, 60);
+    width: 90%;
+    text-align: center;
+    background: whitesmoke;
+}
+
