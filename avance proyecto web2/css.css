@@ -1,0 +1,36 @@
+body{
+    background-color: rgb(27, 26, 26);
+    color: white;
+}
+a li {
+    color: white;
+    text-decoration: underline;
+}
+h1{
+    align-items: center;
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+.p1{
+    font-size:large;
+  text-align: justify;  
+}
+.p2{
+    font-size: large;
+    text-align: justify;
+}
+#imagen1{
+    width: 100%;
+    opacity: 90%;
+    float: left;
+}
+h3{
+    text-align: center;
+    color: blue;
+}
+#imagen2{
+    width: 100%;
+    float: left;
+}
