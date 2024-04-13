@@ -1,0 +1,14 @@
+body{
+    text-align: center;
+    background-color: #e0ebe1;
+    color: #111d15;
+}
+input{
+    background-color: #2f4d39;
+    width: 50%;
+    height: 30px;
+    border: solid #273e2f;
+    border-radius: 20px; 
+    color: #f2f7f3;
+    margin: 10px;
+}
