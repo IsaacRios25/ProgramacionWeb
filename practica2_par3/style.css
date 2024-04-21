@@ -1,0 +1,17 @@
+#caja{
+    background-color: #a3a7a1;
+    border: solid black;
+    margin: 20px;
+    text-align: center;
+}
+#texto{
+    margin: 10px;
+}
+#boton{
+    margin: 10px;
+}
+#cadena{
+    margin: 5px;  
+    width: 95%;  
+    border: solid 1px black;
+}
