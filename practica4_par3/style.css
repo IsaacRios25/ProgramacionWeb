@@ -1,0 +1,50 @@
+body{
+    text-align: center;
+    background-color: #48b8c8;;
+}
+form{
+    color: #f0fbfb;
+    border: solid 2px #132e39;
+    padding: 10px; 
+      
+}
+#nombre{
+    border: solid #132e39;
+    background-color: #d8f3f5;
+    width: 70%;
+}
+#ap{
+    border: solid #132e39;
+    background-color: #d8f3f5;
+    width: 70%;
+}
+#am{
+    border: solid #132e39;
+    background-color: #d8f3f5;
+    width: 70%;
+}
+#anio{
+    border: solid #132e39;
+    background-color: #d8f3f5;
+    width: 70%;
+}
+#dia{
+    border: solid #132e39;
+    background-color: #d8f3f5;
+    width: 70%;
+}
+#mes{
+    border: solid #132e39;
+    background-color: #d8f3f5;
+    width: 70%;
+}
+#resultado{
+    border: solid #132e39;
+    background-color: #d8f3f5;
+    width: 70%;
+}
+#boton{
+    color: #f0fbfb;
+    background-color: #275563;
+    width: 70%;
+}
