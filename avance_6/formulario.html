@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Obtener totales del formulario</title>
+    <link rel="stylesheet" href="estilos.css">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="https://fonts.googleapis.com/css?family=Charmonman" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+	<script type="text/javascript" src="js2/js/js/jquery/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js2/js/jquery/jquery-ui-1.8.17.custom.min.js"></script>
+	<script type="text/javascript" src="js2/jspdf.js"></script>
+	<script type="text/javascript" src="js2/jspdf.plugin.addimage.js"></script>
+	<script type="text/javascript" src="js2/jspdf.plugin.standard_fonts_metrics.js"></script>
+	<script type="text/javascript" src="js2/jspdf.plugin.split_text_to_size.js"></script>
+	<script type="text/javascript" src="js2/jspdf.plugin.from_html.js"></script>
+	<link rel="stylesheet" type="text/css" href="estilos/style.css">	
+</head>
+<script>
+var total;
+function califica()
+    {var total=0;
+    	//Evalua cada pregunta
+    	for (var x=1;x<=10;x++)
+    	{
+        var res=0;
+        var nom="r"+x;
+        var resul=document.getElementsByName(nom);
+        for(var i=0;i<resul.length;i++)
+        {
+            if(resul[i].checked==true)
+                res=parseInt(resul[i].value);
+        }
+        total=total+res;
+        document.getElementById("total").innerHTML="Puntos obtenidos: "+total+" Puntos";
+        }
+        if(total==10)
+        	document.getElementById("comentario").innerHTML="EXCELENTE!!!";
+        else
+        	if(total<=9)
+        	document.getElementById("comentario").innerHTML="Muy bien";
+        else
+        	if(total<=6)
+        	document.getElementById("comentario").innerHTML="Regular!!";
+		else
+        	if(total<5)
+        	document.getElementById("comentario").innerHTML="Estudia un poco más";
+    }
+
+ 
+function generar(){
+
+//Crear un objeto o instancia jsPDF
+var doc = new jsPDF();
+
+//Definir el tamaño de la letra
+doc.setFontSize(40);
+//Color del texto
+doc.setTextColor(9,7,121);
+doc.text(40, 20, "Conceptos basicos");
+doc.setTextColor(17, 122, 209); //Color en formato RGB
+doc.setFontSize(30);
+doc.text(50, 35, "Resultados del test"); //Ubicación, Texto
+doc.setTextColor(0,0,0);
+doc.setFontSize(10);
+doc.text(20, 50, "10 puntos. EXCELENTE. \r Todas tus respuestas son correctas");
+doc.text(20, 70, "9 puntos. Muy bien. \r Obtuviste mas de 7 preguntas correctas");
+doc.text(20, 90, "6 puntos. Regular. \r Obtuviste 6 preguntas correctas");
+doc.text(20, 120, "5 puntos. \r Obtuviste menos de 6 preguntas correctas");
+
+//doc.addImage(imgData, 'JPEG', 10, 40, 180, 180);
+
+var string = doc.output('datauristring');
+
+$('iframe').attr('src', string);
+
+}
+</script>
+
+<body>
+    <div id="contiene">
+	<h1>Responde la encuesta</h1>
+	<h2 id="titulo2">Inteligencia artificial generativa</h2>
+<div id="content">
+	<form>
+	<ul>
+
+		<li>Pregunta 1</li>
+		<label for="">¿Cual es la abrebiatura de inteligencia artificial generativa?</label><br>
+		<input type="radio" name="r1" id="r1" value="0"/>IA  
+		<input type="radio" name="r1" id="r1" value="1"/>IAG <br/>
+		<input type="radio" name="r1" id="r1" value="0"/>AI
+		<input type="radio" name="r1" id="r1" value="0"/>GAI <br/>
+		
+		<li>Pregunta 2</li>
+		<label for="">¿Cual es un motivo por el cual se origena la inteligencia artificial generativa?</label><br>
+		<input type="radio" name="r2" id="r2" value="1"/>A la necesidad de simular los procesos de pensamiento humano 
+		<input type="radio" name="r2" id="r2" value="0"/>Copiar en los examenes<br/>
+		<input type="radio" name="r2" id="r2" value="0"/>Robar datos  
+		<input type="radio" name="r2" id="r2" value="0"/>El poder crear robots<br/>
+
+		<li>Pregunta 3</li>
+		<label for="">¿En que se centra la inteligencia artificial generativa?</label><br>
+		<input type="radio" name="r3" id="r3" value="0"/>En poder cocinar 
+		<input type="radio" name="r3" id="r3" value="1"/>En crear imagenes, conversaciones, contenidos nuevos, etc<br/>
+
+        <li>Pregunta 4</li>
+		<label for="">¿Cual es la abrebiatura de el procesamiento de lenguaje natural?</label><br>
+		<input type="radio" name="r4" id="r4" value="0"/>LPN
+		<input type="radio" name="r4" id="r4" value="0"/>NPL <br/>
+		<input type="radio" name="r4" id="r4" value="1"/>NLP 
+		<input type="radio" name="r4" id="r4" value="0"/>PPNNLL<br/>
+		<li>Pregunta 5</li>
+		<label for="">¿A partir de que año empezo a ver un aumneto significativo en la IAG?</label><br>
+		<input type="radio" name="r5" id="r5" value="0"/>2013 
+		<input type="radio" name="r5" id="r5" value="1"/>2020 <br/>
+		<input type="radio" name="r5" id="r5" value="0"/>2005 
+		<input type="radio" name="r5" id="r5" value="0"/>2018<br/>
+		<li>Pregunta 6</li>
+		<label for="">¿Como funciona la IAG?</label><br>
+		<input type="radio" name="r6" id="r6" value="0"/>Funciona mdiante telepatia  
+		<input type="radio" name="r6" id="r6" value="0"/>Funciona mediante cables <br/>
+		<input type="radio" name="r6" id="r6" value="1"/>Funciona mediante redes neuronales artificiales 
+		<input type="radio" name="r6" id="r6" value="0"/>Funciona mediante un campo electromagnetico<br/>
+		<li>Pregunta 7</li>
+		<label for="">¿Cual es un beneficio de la inteligencia artificial generativa</label><br>
+		<input type="radio" name="r7" id="r7" value="1"/>Contenido publicitario en el area de marketing, lo que ayuda a las empresas 
+		<input type="radio" name="r7" id="r7" value="0"/>Poder hacer reportes de investigacion <br/>
+		<input type="radio" name="r7" id="r7" value="0"/>El poder hablar con alguien 
+		<input type="radio" name="r7" id="r7" value="0"/>Nightcrawler<br/>
+		<li>Pregunta 8</li>
+		<label for="">¿Cual es un riesgo de la inteligencia artificial generativa?</label><br>
+		<input type="radio" name="r8" id="r8" value="0"/>La creacion de texto 
+		<input type="radio" name="r8" id="r8" value="0"/>La creacion de imagnes <br/>
+		<input type="radio" name="r8" id="r8" value="0"/>la creacion de marketing digital  
+		<input type="radio" name="r8" id="r8" value="1"/>El uso de propiedad intelectual <br/>
+		<li>Pregunta 9</li>
+		<label for="">¿Que mejoras a tenido la inteligencia artificial generativa en la actualidad?</label><br>
+		<input type="radio" name="r9" id="r9" value="1"/>Evolución en la generación de video 
+		<input type="radio" name="r9" id="r9" value="0"/>Resulucion menor en las imagenes <br/>
+		<input type="radio" name="r9" id="r9" value="0"/>No ayudar a simplificar los procesos   
+		<input type="radio" name="r9" id="r9" value="0"/>Retrasar los procesos<br/>
+		<li>Pregunta 10</li>
+		<label for="">¿Cual es una situcaion a futuro de la inteligencia artifial genetrativa?</label><br>
+		<input type="radio" name="r10" id="r10" value="0"/>Empeorar a los humanos   
+		<input type="radio" name="r10" id="r10" value="0"/>Limitar el uso de las tecnologias <br/>
+		<input type="radio" name="r10" id="r10" value="1"/>Desafíos legales y regulatorios en la IA 
+		<input type="radio" name="r10" id="r10" value="0"/>Requerimientos execivos<br/>
+	</ul>
+</form>
+</div>
+<input id="boton1" type="button" value="Calificar" onclick="califica()">
+<p></p>
+<p id="total">   </p>
+<p id="comentario">   </p>
+<input id="boton2" type="button" onclick="generar()" value="Ver resultados"/> <br/>
+<iframe frameborder="0" width="600" height="500"></iframe>
+</div>
+</body>
+</html>
