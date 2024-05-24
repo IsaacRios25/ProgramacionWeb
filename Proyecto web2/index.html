@@ -6,6 +6,7 @@
     <title>Home</title>
     <link rel="stylesheet" href="estilos/style.css">
 </head>
+<!--script para llamar al grafioc de google chars-->
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
@@ -33,7 +34,9 @@
       }
 </script>
 <body>
-  
+    <!--barra de nevagacion se trabajo con varios div para darle forma con los estilos css el checkbox sirve para que al momento de dar click sobre el
+    salga la barra desplegable el primer div es donde sale el logo de la universidad en al esquina superior izquierda los otros div fueron para crear las tres
+    lineas al moneto de la dar click sobre la barra desplegable y en la etiqueta nav estan los enlaces a las otras vistas de la paginas -->
     <input type="checkbox" id="menu">
     
     <header>
@@ -47,7 +50,7 @@
             <div></div>
             <div></div>
         </label>
-    
+    <!--En todas las vistas de la pagina estan la misma barra de navegacion ye el mismo pie de pagina -->
         <nav>
             <a href="index.html">Inicio</a>
             <a href="formulario.html">Formulario</a>
@@ -56,12 +59,14 @@
             <a href="preguntas frecuentes.html">Preguntas</a>
         </nav>
     </header>
+    <!--Este div es para la imagen de fondo (La portada de la venta principal)-->
     <div id="caja1">
         <div id="caja2">
         <h1 id="titulo1">Inteligencia artificial generativa</h1>
         </div>
         </div>
-    
+    <!--En esta parte se encuntra toda la informacion relacioanda a la inteligencia artifial generativa toda esta separada por div para darle 
+    mayor orden detro de la pagina y la informacion esta acomorada por listas con puntos clave respecto al tema-->
     <div id="caja3">
         <h2>¿Que es la inteligencia artifial genetrativa?</h2>
         <p class="p1">La inteligencia artifial generativa (IAG) es una rama de la inteligancia artificial que se centra en crear imegenes, conversaciones, contenidos nuevos, etc.
@@ -120,6 +125,7 @@
                 <li>Microsoft y OpenAI: Una alianza Incierta</li>
              </ul>
     </div>
+    <!--En esta parte se encuentra coloco el grafioc de google chars junto una imagen que muestra algunas estadisticas-->
     <div id="caja6">
     <div id="piechart"></div>
     <figure>
@@ -130,6 +136,8 @@
     </figure>
 </div>
 </body>
+<!--Aqui podemos ver el pie de pagina que esta dentro de varios divs para poder hacerlo resposivo el sitio ademas que aqui estan todas las referencias de
+donde se obtuvo la informacion y ademas cuneta con los enlaces a redes sociales los iconos se obtuvieron de boostrap-->
 <footer class="footer">
     <div class="conteiner">
         <div class="footer-row">
