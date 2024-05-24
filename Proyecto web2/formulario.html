@@ -6,6 +6,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link href="https://fonts.googleapis.com/css?family=Charmonman" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+	<!--scrips que llaman a la biblioteca jquery y genera el pdf-->
 	<script type="text/javascript" src="js/jquery/jquery-1.7.1.min.js"></script>
 	<script type="text/javascript" src="js/jquery/jquery-ui-1.8.17.custom.min.js"></script>
 	<script type="text/javascript" src="js2/jspdf.js"></script>
@@ -31,20 +32,23 @@ function califica()
                 res=parseInt(resul[i].value);
         }
         total=total+res;
+		//parte donde compara los puntos obtenidos y muesta un mensaje ralacionado a la calificacion
         document.getElementById("total").innerHTML="Puntos obtenidos: "+total+" Puntos";
         }
-        if(total==10)
+        if(total==10){
         	document.getElementById("comentario").innerHTML="EXCELENTE!!!";
-        else
-        	if(total<=9)
+		}else if(total==9){
         	document.getElementById("comentario").innerHTML="Muy bien";
-        else
-        	if(total<=6)
+		}else if(total==8){
+        	document.getElementById("comentario").innerHTML="Muy bien";
+		}else if(total==7){
+        	document.getElementById("comentario").innerHTML="Bien pero puedes mejorar";
+		}else if(total==6){
         	document.getElementById("comentario").innerHTML="Regular!!";
-		else
-        	if(total<5)
+		}else if(total<=5){
         	document.getElementById("comentario").innerHTML="Estudia un poco más";
-    }
+		}
+	}
 
  
 function generar(){
@@ -55,9 +59,9 @@ var doc = new jsPDF();
 //Definir el tamaño de la letra
 doc.setFontSize(40);
 //Color del texto
-doc.setTextColor(9,7,121);
+doc.setTextColor(13, 22, 102);
 doc.text(40, 20, "Conceptos basicos");
-doc.setTextColor(17, 122, 209); //Color en formato RGB
+doc.setTextColor(67, 13, 102); //Color en formato RGB
 doc.setFontSize(30);
 doc.text(50, 35, "Resultados del test"); //Ubicación, Texto
 doc.setTextColor(0,0,0);
@@ -104,6 +108,7 @@ $('iframe').attr('src', string);
     <div id="contiene">
 	<h1>Responde la encuesta</h1>
 	<h2 id="titulo2">Inteligencia artificial generativa</h2>
+	<!--Formulario realizado se trabajo con varios inputs radio para que guarden un valor y poiir emdio de javascript muestren una calificacion-->
 <div id="content">
 	<form>
 	<ul>
@@ -171,11 +176,13 @@ $('iframe').attr('src', string);
 		<input type="radio" name="r10" id="r10" value="0"/>Requerimientos execivos<br/>
 	</ul>
 </form>
+<!--Input donde llama a la funcion calificar que muestra la calificacion obtenida-->
 </div>
 <input id="boton1" type="button" value="Calificar" onclick="califica()">
 <p></p>
 <p id="total"></p>
 <p id="comentario"></p>
+<!--Input que llama a la funcion generar de la biblioteca jquery y genera un pdf-->
 <input id="boton2" type="button" onclick="generar()" value="Ver resultados"/> <br/>
 <iframe frameborder="0" width="600" height="500"></iframe>
 </div>
