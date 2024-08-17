@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=New+Amsterdam&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body{
+    background-color: lightgray;
+    color: black;
+    font-family: "New Amsterdam";
+    font-weight: 100;
+    font-style: normal;
+    
+}
+#title{
+    text-align: center;
+}
+p{
+    font-size: 28px;
+}
+#parrafo1{
+    position: absolute;
+    text-align: center;
+    border: solid 3px rgb(145, 23, 23);
+    width: 80%;
+    height: 10%;
+    margin-left: 10%;
+    background-color: rgb(241, 194, 73);
+}
+
+
+#parrafo2{
+    position: absolute;
+    border: solid 3px yellow;
+    margin-top: 100px;
+    left: 10PX;
+    width: 40%;
+    height: 150px;
+    background-color: lightyellow;
+}
+#parrafo3{
+    position: absolute;
+    border: solid 3px purple;
+    margin-top: 280px;
+    left: 10px;
+    width: 40%;
+    height: 150px;
+    background-color: rgb(255, 192, 255);
+}
+
+#parrafo5{
+    text-align: right;
+    position: absolute;
+    border: solid 3px blue; 
+    margin-top: 100px;
+    right: 10PX;
+    width: 40%;
+    height: 150px;
+    background-color: lightblue;
+}
+
+#parrafo6{
+    text-align: right;
+    position: absolute;
+    border: solid 3px brown;
+    margin-top: 280px;
+    right: 10px;
+    width: 40%;
+    height: 150px;
+    background-color: rgb(218, 99, 99);
+}
+  
+#parrafo4 {
+    position: absolute;
+    border: solid 3px darkgreen;
+    margin-top: 190px;
+    margin-left: 30%;
+    width: 40%;
+    height: 150px;
+    text-align: center;
+    background-color: lightgreen;
+    z-index: 1;
+  }
+footer{
+    position: absolute;
+    text-align: center;
+    top: 100%;
+    width: 98%;
+}
